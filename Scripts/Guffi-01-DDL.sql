@@ -1,9 +1,9 @@
 -- Cria o banco de dados com o nome Gufi
-CREATE DATABASE Gufi_Renan;
+CREATE DATABASE Guffi_Tarde;
 
 
 -- Define o banco de dados que será utilizado
-USE Gufi_Renan;
+USE Guffi_Tarde;
 
 
 -- Criação das tabelas

@@ -1,4 +1,4 @@
-USE Gufi_Renan
+USE Guffi_Tarde
 
 INSERT INTO TipoUsuario (TituloTipoUsuario)
 VALUES ('Administrador'),('Comum');
@@ -17,6 +17,11 @@ VALUES ('Administrador','adm@adm.com','adm123','Não Informado','06/02/2020',1),
 INSERT INTO Evento (NomeEvento,DataEvento,Descricao,AcessoLivre,IdInstituicao,IdTipoEvento)
 VALUES 
 		('Optimização de banco dados','07/02/2020','Aplicação de itens calusterizados e não clausterizados',2,1,3)
+		,('Ciclo de Vida','07/02/2020','Como utilizar o ciclo de vida com ReactJs',0,1,2)
+		,('Introdução ao C#','07/02/2020','Conceitos sobre os pilares da programação orientada a objetos',1,1,1)
 
 INSERT INTO Presenca (IdUsuario,IdEvento,Situacao)
-VALUES  (2,2,'Agendada'),(2,3,'Confirmada'),(3,1,'Não Compareceu')
+VALUES  (2,2,'Agendada'),(2,1,'Confirmada'),(3,3,'Não Compareceu')
+
+SELECT*FROM Presenca
+SELECT*FROM Evento
