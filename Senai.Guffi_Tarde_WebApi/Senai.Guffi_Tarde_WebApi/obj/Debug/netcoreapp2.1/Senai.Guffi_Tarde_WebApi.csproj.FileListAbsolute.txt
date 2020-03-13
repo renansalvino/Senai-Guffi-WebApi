@@ -1,0 +1,14 @@
+C:\Users\36591349880\Desktop\Projetos\Projeto-Guffi\Senai.Guffi_Tarde_WebApi\Senai.Guffi_Tarde_WebApi\bin\Debug\netcoreapp2.1\Senai.Guffi_Tarde_WebApi.deps.json
+C:\Users\36591349880\Desktop\Projetos\Projeto-Guffi\Senai.Guffi_Tarde_WebApi\Senai.Guffi_Tarde_WebApi\bin\Debug\netcoreapp2.1\Senai.Guffi_Tarde_WebApi.runtimeconfig.json
+C:\Users\36591349880\Desktop\Projetos\Projeto-Guffi\Senai.Guffi_Tarde_WebApi\Senai.Guffi_Tarde_WebApi\bin\Debug\netcoreapp2.1\Senai.Guffi_Tarde_WebApi.runtimeconfig.dev.json
+C:\Users\36591349880\Desktop\Projetos\Projeto-Guffi\Senai.Guffi_Tarde_WebApi\Senai.Guffi_Tarde_WebApi\bin\Debug\netcoreapp2.1\Senai.Guffi_Tarde_WebApi.dll
+C:\Users\36591349880\Desktop\Projetos\Projeto-Guffi\Senai.Guffi_Tarde_WebApi\Senai.Guffi_Tarde_WebApi\bin\Debug\netcoreapp2.1\Senai.Guffi_Tarde_WebApi.pdb
+C:\Users\36591349880\Desktop\Projetos\Projeto-Guffi\Senai.Guffi_Tarde_WebApi\Senai.Guffi_Tarde_WebApi\obj\Debug\netcoreapp2.1\Senai.Guffi_Tarde_WebApi.csprojAssemblyReference.cache
+C:\Users\36591349880\Desktop\Projetos\Projeto-Guffi\Senai.Guffi_Tarde_WebApi\Senai.Guffi_Tarde_WebApi\obj\Debug\netcoreapp2.1\Senai.Guffi_Tarde_WebApi.csproj.CoreCompileInputs.cache
+C:\Users\36591349880\Desktop\Projetos\Projeto-Guffi\Senai.Guffi_Tarde_WebApi\Senai.Guffi_Tarde_WebApi\obj\Debug\netcoreapp2.1\Senai.Guffi_Tarde_WebApi.RazorAssemblyInfo.cache
+C:\Users\36591349880\Desktop\Projetos\Projeto-Guffi\Senai.Guffi_Tarde_WebApi\Senai.Guffi_Tarde_WebApi\obj\Debug\netcoreapp2.1\Senai.Guffi_Tarde_WebApi.RazorAssemblyInfo.cs
+C:\Users\36591349880\Desktop\Projetos\Projeto-Guffi\Senai.Guffi_Tarde_WebApi\Senai.Guffi_Tarde_WebApi\obj\Debug\netcoreapp2.1\Senai.Guffi_Tarde_WebApi.AssemblyInfoInputs.cache
+C:\Users\36591349880\Desktop\Projetos\Projeto-Guffi\Senai.Guffi_Tarde_WebApi\Senai.Guffi_Tarde_WebApi\obj\Debug\netcoreapp2.1\Senai.Guffi_Tarde_WebApi.AssemblyInfo.cs
+C:\Users\36591349880\Desktop\Projetos\Projeto-Guffi\Senai.Guffi_Tarde_WebApi\Senai.Guffi_Tarde_WebApi\obj\Debug\netcoreapp2.1\Senai.Guffi_Tarde_WebApi.RazorTargetAssemblyInfo.cache
+C:\Users\36591349880\Desktop\Projetos\Projeto-Guffi\Senai.Guffi_Tarde_WebApi\Senai.Guffi_Tarde_WebApi\obj\Debug\netcoreapp2.1\Senai.Guffi_Tarde_WebApi.dll
+C:\Users\36591349880\Desktop\Projetos\Projeto-Guffi\Senai.Guffi_Tarde_WebApi\Senai.Guffi_Tarde_WebApi\obj\Debug\netcoreapp2.1\Senai.Guffi_Tarde_WebApi.pdb
