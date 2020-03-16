@@ -9,16 +9,15 @@ using System.Threading.Tasks;
 
 namespace Senai.Guffi_Tarde_WebApi.Controller
 {
-    public class EventoController
-    {
         [Produces("application/json")]
         [Route("api/[controller]")]
         [ApiController]
-        public class TipoEventoController : ControllerBase
-        {
+    public class EventoController : ControllerBase
+    {
+       
             private IEventoRepository _EventoRepository;
 
-            public TipoEventoController()
+            public EventoController()
             {
                 _EventoRepository = new EventoRepository();
             }
@@ -81,5 +80,5 @@ namespace Senai.Guffi_Tarde_WebApi.Controller
             }
         }
     }
-}
+
 

@@ -10,87 +10,87 @@ using System.Threading.Tasks;
 namespace Senai.Guffi_Tarde_WebApi.Controller
 {
     //Fazer os EndPoints Extras
-        [Produces("application/json")]
-        [Route("api/[controller]")]
-        [ApiController]
-        public class PresencaController : ControllerBase
+    [Produces("application/json")]
+    [Route("api/[controller]")]
+    [ApiController]
+    public class PresencaController : ControllerBase
+    {
+        private IPresencaRepository _PresencaRepository;
+
+        public PresencaController()
         {
-            private IPresencaRepository _PresencaRepository;
+            _PresencaRepository = new PresencaRepository();
+        }
 
-            public PresencaController()
+        [HttpGet]
+        public IActionResult Get()
+        {
+            return Ok(_PresencaRepository.Listar());
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult GetById(int id)
+        {
+            return StatusCode(200, _PresencaRepository.BuscarPorId(id));
+        }
+
+        [HttpPost]
+        public IActionResult Post(Presenca novoPresenca)
+        {
+            _PresencaRepository.Cadastrar(novoPresenca);
+
+            return StatusCode(201);
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult Put(int id, Presenca PresencaAtualizado)
+        {
+            Presenca PresencaBuscado = _PresencaRepository.BuscarPorId(id);
+
+            if (PresencaBuscado != null)
             {
-                _PresencaRepository = new PresencaRepository();
-            }
-
-            [HttpGet]
-            public IActionResult Get()
-            {
-                return Ok(_PresencaRepository.Listar());
-            }
-
-            [HttpGet("{id}")]
-            public IActionResult GetById(int id)
-            {
-                return StatusCode(200, _PresencaRepository.BuscarPorId(id));
-            }
-
-            [HttpPost]
-            public IActionResult Post(Presenca novoPresenca)
-            {
-                _PresencaRepository.Cadastrar(novoPresenca);
-
-                return StatusCode(201);
-            }
-
-            [HttpPut("{id}")]
-            public IActionResult Put(int id, Presenca PresencaAtualizado)
-            {
-                Presenca PresencaBuscado = _PresencaRepository.BuscarPorId(id);
-
-                if (PresencaBuscado != null)
+                try
                 {
-                    try
-                    {
-                        _PresencaRepository.Atualizar(id, PresencaAtualizado);
+                    _PresencaRepository.Atualizar(id, PresencaAtualizado);
 
-                        return StatusCode(200);
-                    }
-                    catch (Exception erro)
-                    {
-                        return BadRequest(erro);
-                    }
+                    return StatusCode(200);
                 }
-
-                return StatusCode(404);
-            }
-
-            [HttpDelete("{id}")]
-            public IActionResult Delete(int id)
-            {
-                Presenca PresencaBuscado = _PresencaRepository.BuscarPorId(id);
-
-                if (PresencaBuscado == null)
+                catch (Exception erro)
                 {
-                    return NotFound();
+                    return BadRequest(erro);
                 }
-
-                _PresencaRepository.Deletar(id);
-
-                return StatusCode(202);
             }
 
-            [HttpPost("{id}")]
-            public IActionResult Convidar (Presenca presenca, int id)
+            return StatusCode(404);
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            Presenca PresencaBuscado = _PresencaRepository.BuscarPorId(id);
+
+            if (PresencaBuscado == null)
+            {
+                return NotFound();
+            }
+
+            _PresencaRepository.Deletar(id);
+
+            return StatusCode(202);
+        }
+
+        [HttpPost("{id}")]
+        public IActionResult Convidar(Presenca presenca, int id)
         {
             Presenca conviteBuscado = new Presenca();
-            
-            if(conviteBuscado == null)
+
+            if (conviteBuscado == null)
             {
                 try
                 {
                     _PresencaRepository.Convidar(presenca, id);
                     return StatusCode(200);
-;                }
+                    ; }
                 catch (Exception e)
                 {
                     return BadRequest(e);
@@ -100,7 +100,7 @@ namespace Senai.Guffi_Tarde_WebApi.Controller
             return StatusCode(404);
         }
         [HttpGet("{presenca}/{id}")]
-        public IActionResult ListarMinhas (Presenca presenca, int id)
+        public IActionResult ListarMinhas(Presenca presenca, int id)
         {
             Presenca ListaBuscada = new Presenca();
             if (ListaBuscada == null)
@@ -117,20 +117,20 @@ namespace Senai.Guffi_Tarde_WebApi.Controller
                 }
 
             }
-            return Ok(_PresencaRepository.ListarMinhas(presenca,id));
+            return Ok(_PresencaRepository.ListarMinhas(presenca, id));
         }
 
         [HttpDelete("Reprovar/{id}")]
-        public IActionResult Reprovar (Presenca presenca,int id)
+        public IActionResult Reprovar(int id)
         {
-            Presenca BuscarPresencaASerReprovada = _PresencaRepository.BuscarPorId(id);
-            if (BuscarPresencaASerReprovada == null)
+            Presenca PresencaBuscado = _PresencaRepository.BuscarPorId(id);
+            if (PresencaBuscado == null)
             {
                 try
                 {
-                    _PresencaRepository.ListarMinhas(presenca, id);
+                    _PresencaRepository.Reprovar( id);
                     return StatusCode(200);
-                    
+
                 }
                 catch (Exception e)
                 {
@@ -139,11 +139,11 @@ namespace Senai.Guffi_Tarde_WebApi.Controller
 
             }
             return StatusCode(404);
-           
+
         }
-        
-        [HttpPost("{id}")]
-        public IActionResult Aprovar (int id)
+
+        [HttpPost("Aprovar/{id}")]
+        public IActionResult Aprovar(int id)
         {
             Presenca BuscarPresencaASerAprovada = _PresencaRepository.BuscarPorId(id);
             if (BuscarPresencaASerAprovada == null)
@@ -161,6 +161,14 @@ namespace Senai.Guffi_Tarde_WebApi.Controller
 
             }
             return StatusCode(404);
+
+        }
+
+        [HttpPost("{id}")]
+        public IActionResult Inscrição (Presenca presenca)
+        {
+            _PresencaRepository.Inscricao(presenca);
+            return StatusCode(202);
         }
         }
     }

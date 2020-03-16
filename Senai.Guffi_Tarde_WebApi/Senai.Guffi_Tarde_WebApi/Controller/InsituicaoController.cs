@@ -9,8 +9,6 @@ using System.Threading.Tasks;
 
 namespace Senai.Guffi_Tarde_WebApi.Controller
 {
-    public class InsituicaoController : ControllerBase
-    {
         [Produces("application/json")]
         [Route("api/[controller]")]
         [ApiController]
@@ -20,7 +18,7 @@ namespace Senai.Guffi_Tarde_WebApi.Controller
 
             public InstituicaoController()
             {
-                _InstituicaoRepository = new IiTipoUsuarioRepository();
+                _InstituicaoRepository = new InstituicaoRepository();
             }
 
             [HttpGet]
@@ -81,4 +79,4 @@ namespace Senai.Guffi_Tarde_WebApi.Controller
             }
         }
     }
-}
+

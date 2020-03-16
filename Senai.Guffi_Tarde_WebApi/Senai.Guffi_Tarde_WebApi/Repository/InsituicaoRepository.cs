@@ -1,4 +1,5 @@
 ﻿using Senai.Guffi_Tarde_WebApi.Domains;
+using Senai.Guffi_Tarde_WebApi.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Senai.Guffi_Tarde_WebApi.Repository
 {
-    public class IiTipoUsuarioRepository : IInstituicaoRepository
+    public class InstituicaoRepository : IInstituicaoRepository
     {
         GufiContext ctx = new GufiContext();
 

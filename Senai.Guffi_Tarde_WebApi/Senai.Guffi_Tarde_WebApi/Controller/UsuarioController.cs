@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Senai.Guffi_Tarde_WebApi.Domains;
 using Senai.Guffi_Tarde_WebApi.Interfaces;
+using Senai.Guffi_Tarde_WebApi.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace Senai.Guffi_Tarde_WebApi.Controller
 
             public UsuarioController()
             {
-                _UsuarioRepository = new InsituicaoRepository();
+                _UsuarioRepository = new UsuarioRepository();
             }
 
             [HttpGet]
